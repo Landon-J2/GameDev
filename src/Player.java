@@ -4,7 +4,7 @@ import com.badlogic.gdx.Input;
 public class Player extends GameObject{
     private double speed;
     public Player(double x, double y){
-        super(x, y, 0, 0, "ship.png");
+        super(x, y, 50, 50, "assets/ship.png");
         speed = 200;
     }
     public void move(double deltaTime){
