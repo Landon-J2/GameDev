@@ -23,12 +23,26 @@ public class GameObject {
     }
 
     // TODO 1: Write getter methods for x, y, and hitbox.
-    
-
+    public double getX(){
+        return x;
+    }
+    public double getY(){
+        return y;
+    }
+    public Rectangle getHitbox(){
+        return hitbox;
+    }
     // TODO 2: Write setter methods for x and y. 
     // HINT: When you change x or y, you MUST also update the hitbox!
     // Example: hitbox.setPosition((int) newX, (int) newY);
-
+    public void setX(double i){
+        x = i;
+        hitbox.setPosition((int) i, (int) getY());
+    }
+    public void setY(double i){
+        y = i;
+        hitbox.setPosition((int) getX(), (int) i);
+    }
 
     /**
      * Draws the object to the screen. 
